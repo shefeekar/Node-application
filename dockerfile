@@ -12,7 +12,7 @@ RUN npm install
 # Copy the app source
 COPY . .
 
-# Expose the port the app is running on
+# Expose  the port of the app is running  on
 EXPOSE 8080
 
 # Start the app when the container is run
