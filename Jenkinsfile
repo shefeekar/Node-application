@@ -4,19 +4,14 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main'
+                git 'https://github.com/shefeekar/hello-world-main.git'
             }
         }
 
         stage('Build') {
             steps {
-                docker.build('node-hello-world:latest')
-            }
-        }
-
-        
-                }
+                dockerBuild 'hello-world:latest'
             }
         }
     }
-}
+}      
