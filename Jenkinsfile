@@ -10,8 +10,13 @@ pipeline {
 
         stage('Build') {
             steps {
-               sh 'dockerBuild  hello-world:latest'
+               script {
+                   def dockerImage = docker.build('hello-world:latest')
+                   dockerImage.inside {
+                       
+                   }
+               }
             }
         }
     }
-}      
+}
