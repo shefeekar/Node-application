@@ -3,6 +3,7 @@ FROM node:latest
 # Create an app directory
 WORKDIR /
 
+ENTRYPOINT ["node"]
 # Copy the package.json file
 COPY package.json ./
 
