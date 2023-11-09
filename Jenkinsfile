@@ -13,7 +13,6 @@ pipeline {
                script {
                    def dockerImage = docker.build('hello-world:latest')
                    dockerImage.inside {
-                    sh "docker install"
                     sh "cd /home/shefeek/Desktop/node-hello-world-main && node script.js"   
                    }
                }
