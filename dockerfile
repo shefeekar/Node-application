@@ -13,9 +13,8 @@ RUN npm install
 COPY . .
 
 # Expose  the port of the app is running  on
-EXPOSE 8080
+EXPOSE 8081
 
-ENTRYPOINT ["node"]
 # Start the app when the container is run
-CMD ["npm", "start"]
+CMD ["npm","start"]
 
