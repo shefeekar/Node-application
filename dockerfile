@@ -3,7 +3,6 @@ FROM node:latest
 # Create an app directory
 WORKDIR /
 
-ENTRYPOINT ["node"]
 # Copy the package.json file
 COPY package.json ./
 
@@ -16,6 +15,7 @@ COPY . .
 # Expose  the port of the app is running  on
 EXPOSE 8080
 
+ENTRYPOINT ["node"]
 # Start the app when the container is run
 CMD ["npm", "start"]
 
