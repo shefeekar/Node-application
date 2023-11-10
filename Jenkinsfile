@@ -10,7 +10,7 @@ pipeline {
 
         stage('Build') {
             timeout  { 
-                time(5)
+                time(2)
                 unit('MINUTES')
             steps {
                script {
