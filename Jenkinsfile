@@ -13,7 +13,7 @@ pipeline {
                script {
                    def dockerImage = docker.build('node-hello-world:latest')
                     // Run the docker run command
-                    docker.run('-it', '-p', '8080:8080', '--name', 'node-hello-world', 'node-hello-world:latest')
+                    docker.run('-it', '-p', '8081:8081', '--name', 'node-hello-world', 'node-hello-world:latest')
                    dockerImage.inside {
                     
                        
