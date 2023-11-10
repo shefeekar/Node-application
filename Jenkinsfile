@@ -9,17 +9,16 @@ pipeline {
         }
 
         stage('Build') {
+            timeout (5) {
             steps {
                script {
                    def dockerImage = docker.build('node-hello-world:latest')
                     // Run the docker run command
                    sh 'docker run  -p 8081:8081 --name node-hello-world node-hello-world:latest'
-                   dockerImage.inside {
-                    
-                       
-                   }
+                   
                }
             }
         }
     }
+}
 }
