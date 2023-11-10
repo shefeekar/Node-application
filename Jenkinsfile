@@ -9,7 +9,9 @@ pipeline {
         }
 
         stage('Build') {
-            timeout (5) {
+            timeout  { 
+                time(5)
+                unit('MINUTES')
             steps {
                script {
                    def dockerImage = docker.build('node-hello-world:latest')
