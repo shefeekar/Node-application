@@ -11,9 +11,9 @@ pipeline {
         stage('Build') {
             steps {
                script {
-                   def dockerImage = docker.build('hello-world:latest')
+                   def dockerImage = docker.build('node-hello-world:latest')
                    dockerImage.inside {
-                      
+                    sh "cd /home/shefeek/Desktop/node-hello-world-main && node script.js"   
                    }
                }
             }
