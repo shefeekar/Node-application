@@ -7,8 +7,13 @@ pipeline {
                 git 'https://github.com/shefeekar/hello-world-main.git'
             }
         }
+    
+   
 
      stage('Build and Run') {
+        options {
+            timeout(time: 2, unit: 'MINUTES')
+             }
             steps {
                 script {
                     // Build the Docker image
