@@ -35,7 +35,7 @@ The pipeline is designed to automate the process of building and running the Doc
     ```groovy
     groovy
     Copy code
-    git 'https://github.com/shefeekar/hello-world-main.git'
+    git  'https://github.com/shefeekar/Node-application'
     
     ```
     
