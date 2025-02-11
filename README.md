@@ -1,7 +1,7 @@
 # Node.js Application: CI/CD with Docker and Jenkins
 
 ## Description
-
+.
 This project demonstrates the CI/CD process for a Node.js application using Docker and Jenkins. The pipeline automates the process of building a Docker image, running the container, and performing cleanup tasks, ensuring a seamless development and deployment workflow.
 
 ## Features
